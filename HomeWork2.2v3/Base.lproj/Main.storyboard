@@ -54,19 +54,19 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbZ-KM-8o4">
                                         <rect key="frame" x="0.0" y="0.0" width="35" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ZL-Q2-zu2">
                                         <rect key="frame" x="0.0" y="83.5" width="35" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSH-NK-oEx">
                                         <rect key="frame" x="0.0" y="167" width="35" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -121,6 +121,7 @@
                         <outlet property="blueSlider" destination="0Y0-OJ-veG" id="J5e-nG-uTw"/>
                         <outlet property="greenLevelLabel" destination="6ZL-Q2-zu2" id="Kh5-E2-0de"/>
                         <outlet property="greenSlider" destination="Wpv-ur-gsQ" id="wUl-J0-jsk"/>
+                        <outlet property="multiColorView" destination="hLg-RO-4PT" id="9Ub-HZ-bwc"/>
                         <outlet property="redLevelLabel" destination="RbZ-KM-8o4" id="O54-er-ixl"/>
                         <outlet property="redSlider" destination="5Ku-Dz-DSW" id="DPk-1a-dO9"/>
                     </connections>
