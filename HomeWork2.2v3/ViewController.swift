@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        multiColorView.layer.cornerRadius = 10
+        
         redSlider.value = 0.5
         redSlider.minimumValue = 0
         redSlider.maximumValue = 1
@@ -53,18 +55,18 @@ class ViewController: UIViewController {
     
     @IBAction func redSliderAction() {
         changeColor()
-        
         redLevelLabel.text = String(redSlider.value)
+        redSlider.value = round(100 * redSlider.value) / 100
     }
     @IBAction func greenSliderAction() {
         changeColor()
-       
         greenLevelLabel.text = String(greenSlider.value)
+        greenSlider.value = round(100 * greenSlider.value) / 100
     }
     @IBAction func blueSliderAction() {
         changeColor()
-
         blueLevelLabel.text = String(blueSlider.value)
+        blueSlider.value = round(100 * blueSlider.value) / 100
     }
     
 }
