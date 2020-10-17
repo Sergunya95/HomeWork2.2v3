@@ -23,8 +23,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-        
         redSlider.value = 0.5
         redSlider.minimumValue = 0
         redSlider.maximumValue = 1
@@ -49,22 +47,25 @@ class ViewController: UIViewController {
         
     }
 
-    @IBAction func redSliderAction() {
-        let currentRedValeu = CGFloat(redSlider.value)
-        redLevelLabel.text = String(redSlider.value)
-        multiColorView.backgroundColor = multiColorView.backgroundColor?.withAlphaComponent(currentRedValeu)
-    }
-    @IBAction func greenSliderAction() {
-        let currentGreenValeu = CGFloat(greenSlider.value)
-        greenLevelLabel.text = String(greenSlider.value)
-        multiColorView.backgroundColor = multiColorView.backgroundColor?.withAlphaComponent(currentGreenValeu)
-    }
-    @IBAction func blueSliderAction() {
-        let currentBlueValeu = CGFloat(blueSlider.value)
-        blueLevelLabel.text = String(blueSlider.value)
-        multiColorView.backgroundColor = multiColorView.backgroundColor?.withAlphaComponent(currentBlueValeu)
+    func changeColor() {
+        multiColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
     }
     
-   
+    @IBAction func redSliderAction() {
+        changeColor()
+        
+        redLevelLabel.text = String(redSlider.value)
+    }
+    @IBAction func greenSliderAction() {
+        changeColor()
+       
+        greenLevelLabel.text = String(greenSlider.value)
+    }
+    @IBAction func blueSliderAction() {
+        changeColor()
+
+        blueLevelLabel.text = String(blueSlider.value)
+    }
+    
 }
 
