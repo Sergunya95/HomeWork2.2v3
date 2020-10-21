@@ -25,49 +25,40 @@ class ViewController: UIViewController {
         
         multiColorView.layer.cornerRadius = 10
         
-        redSlider.value = 0.5
-        redSlider.minimumValue = 0
-        redSlider.maximumValue = 1
         redSlider.minimumTrackTintColor = .red
         redSlider.thumbTintColor = .red
         
-        greenSlider.value = 0.5
-        greenSlider.minimumValue = 0
-        greenSlider.maximumValue = 1
         greenSlider.minimumTrackTintColor = .green
         greenSlider.thumbTintColor = .green
-        
-        blueSlider.value = 0.5
-        blueSlider.minimumValue = 0
-        blueSlider.maximumValue = 1
+
         blueSlider.minimumTrackTintColor = .blue
         blueSlider.thumbTintColor = .blue
         
-        redLevelLabel.text = String(redSlider.value)
-        greenLevelLabel.text = String(greenSlider.value)
-        blueLevelLabel.text = String(blueSlider.value)
+        redLevelLabel.text = String(format: "%.2f", redSlider.value)
+        greenLevelLabel.text = String(format: "%.2f", greenSlider.value)
+        blueLevelLabel.text = String(format: "%.2f", blueSlider.value)
         
     }
 
-    func changeColor() {
-        multiColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
-    }
+   
     
     @IBAction func redSliderAction() {
         changeColor()
-        redLevelLabel.text = String(redSlider.value)
-        redSlider.value = round(100 * redSlider.value) / 100
+        redLevelLabel.text = String(format: "%.2f", redSlider.value)
+       
     }
     @IBAction func greenSliderAction() {
         changeColor()
-        greenLevelLabel.text = String(greenSlider.value)
-        greenSlider.value = round(100 * greenSlider.value) / 100
+        greenLevelLabel.text = String(format: "%.2f", greenSlider.value)
     }
     @IBAction func blueSliderAction() {
         changeColor()
-        blueLevelLabel.text = String(blueSlider.value)
-        blueSlider.value = round(100 * blueSlider.value) / 100
+        blueLevelLabel.text = String(format: "%.2f", blueSlider.value)
     }
     
+    func changeColor() {
+        multiColorView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
+        green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+    }
 }
 
